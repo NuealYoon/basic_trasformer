@@ -1,4 +1,4 @@
-# basic_trasformer
+# basic_transformer
 
 ## 1. 개요
  transformer 모델로 pretin을 하는 코드 입니다. 코드는 5개의 구조로 되어 있으며 아래와 같습니다.
