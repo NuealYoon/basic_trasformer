@@ -1,4 +1,4 @@
-# basic_transformer
+transformer with nn. and TorchText
 
 ## 1. 개요
  pytorch의 nn.Transformer와 TorchText를 이용해서 transformer 모델을 만들고 pretrain 학습을 시키는 코드 입니다. 
