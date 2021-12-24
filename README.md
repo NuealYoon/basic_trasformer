@@ -26,5 +26,5 @@ ex)
 ## 2. 코드 실행
 python run.py
 
-## 3. 라이브러리 설치
+## 3. 라이브러리 설치 
 conda install pytorch -c pytorch
