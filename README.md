@@ -10,7 +10,7 @@ ex)
 출력: B + C + D
  
  
- 
+## 2. 코드 구조
 코드는 5개의 구조로 되어 있으며 아래와 같습니다.
 1. Define the model
   - Transformer model에 관련된 코드 입니다. 크게 encoder와 decoder로 되어 있습니다. 특히 encoder의 경우는 nn.TransformerEncoder와 nn.TransformerEncoderLayer를 사용하여 만들어진 코드 입니다.
