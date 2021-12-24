@@ -4,7 +4,6 @@ transformer with nn. and TorchText
  pytorch의 nn.Transformer와 TorchText를 이용해서 transformer 모델을 만들고, 다음 단어가 무엇인지 예측하는 모델을 학습시키는 코드 입니다.
  
  ex) input : A + B + C
- 
      output: B + C + D
  
  
