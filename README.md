@@ -2,9 +2,12 @@ transformer with nn. and TorchText
 
 ## 1. 개요
  pytorch의 nn.Transformer와 TorchText를 이용해서 transformer 모델을 만들고, 다음 단어가 무엇인지 예측하는 모델을 학습시키는 코드 입니다.
+ 
  ex) input : A + B + C
+ 
      output: B + C + D
-     
+ 
+ 
 코드는 5개의 구조로 되어 있으며 아래와 같습니다.
 1. Define the model
   - Transformer model에 관련된 코드 입니다. 크게 encoder와 decoder로 되어 있습니다. 특히 encoder의 경우는 nn.TransformerEncoder와 nn.TransformerEncoderLayer를 사용하여 만들어진 코드 입니다.
