@@ -264,4 +264,4 @@ model_info = {'epochs': epochs,
               'val_loss_list': val_loss_list,
               'val_ppl_list': val_ppl_list}
 
-torch.save(model_info, 'model')
+torch.save(model_info, 'model.pt')
