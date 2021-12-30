@@ -223,9 +223,8 @@ best_val_loss = float('inf')
 epochs = 3
 best_model = None
 
-
-
-
+val_loss_list = []
+val_ppl_list = []
 
 for epoch in range(1, epochs + 1):
     epoch_start_time = time.time()
@@ -237,15 +236,14 @@ for epoch in range(1, epochs + 1):
     print(f'| end of epoch {epoch:3d} | time: {elapsed:5.2f}s | '
           f'valid loss {val_loss:5.2f} | valid ppl {val_ppl:8.2f}')
     print('-' * 89)
+    val_loss_list.append(val_loss)
+    val_ppl_list.append(val_ppl)
 
     if val_loss < best_val_loss:
         best_val_loss = val_loss
         best_model = copy.deepcopy(model)
 
     scheduler.step()
-
-
-
 
 # 5. Evaluation the best model on the test dataset
 test_loss = evaluate(best_model, test_data)
@@ -254,7 +252,7 @@ print('=' * 89)
 print(f'| End of training | test loss {test_loss:5.2f} | '
       f'test ppl {test_ppl:8.2f}')
 print('=' * 89)
-bb = 0
+
 
 # # 학습된 모델과 정보 저장
 model_info = {'epochs': epochs,
@@ -262,5 +260,8 @@ model_info = {'epochs': epochs,
               'optimizer_state_dict': optimizer.state_dict(),
               'best_val_loss': best_val_loss,
               'test loss': test_loss,
-              'test ppl': test_ppl}
+              'test ppl': test_ppl,
+              'val_loss_list': val_loss_list,
+              'val_ppl_list': val_ppl_list}
+
 torch.save(model_info, 'model')
