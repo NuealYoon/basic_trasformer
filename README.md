@@ -24,7 +24,8 @@ ex)
   - test 데이터셋으로 모델이 어느정도 성능을 낼 수 있는지 평가하는 코드입니다.
 
 ## 2. 코드 실행
-python run.py
+# 학습
+python train.py
 
 ## 3. 라이브러리 설치 
 conda install pytorch -c pytorch
